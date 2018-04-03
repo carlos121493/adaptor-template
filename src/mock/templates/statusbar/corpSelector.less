@@ -1,0 +1,33 @@
+
+.footer {
+  margin-top: 20px;
+  .btnGroup {
+    width: 100%;
+    display: flex;
+    button {
+      flex: 1;
+      vertical-align: middle;
+    }
+    button+button {
+      margin-left: 12px !important;
+    }
+    .btnSave {
+      position: relative;
+      overflow: hidden;
+      &>div {
+        position: absolute;
+        left: 0; top: 32px;
+        width: 100%;
+        height: 100%;
+        line-height: 38px;
+        text-align: center;
+        transition: 0.2s ease-out;
+        opacity: 0;
+      }
+      .btnActive {
+        top: 0;
+        opacity: 1;
+      }
+    }
+  }
+}
