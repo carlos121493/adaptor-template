@@ -4,8 +4,6 @@ export default {
     callNative(param);
   },
   native: ({ callTemplate }) => (params) => {
-    callTemplate('share')({
-      ...params,
-    });
+    callTemplate('share')(params);
   },
 };

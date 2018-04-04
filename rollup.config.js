@@ -4,6 +4,8 @@ import uglify from 'rollup-plugin-uglify';
 import globals from 'rollup-plugin-node-globals';
 import json from 'rollup-plugin-json';
 import builtins from 'rollup-plugin-node-builtins';
+import postcss from 'rollup-plugin-postcss';
+import babel from 'rollup-plugin-babel';
 import pkg from './package.json';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -21,6 +23,11 @@ export default [
         modulesOnly: true,
         preferBuiltins: true,
         extensions: ['.js', '.json'],
+      }),
+      babel({
+        externalHelpers: true,
+        runtimeHelpers: true,
+        exclude: 'node_modules/**' // only transpile our source code
       }),
       json({
         include: 'node_modules/**',

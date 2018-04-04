@@ -1,7 +1,6 @@
 
 import { init as initRPC } from '@ali/dingtalk-idl-ts/lib/rpc-request';
 import getAuthCode from './open/getAuthCode';
-import rsa from './rsa';
 import dtBridge from './dtBridge';
 import navigator from './navigator';
 import profile from './profile';
@@ -22,20 +21,19 @@ export default (framework, abridge) => {
     sendMsg,
   });
 
-  const [alert, confirm, showToast, showLoading, hideLoading, showActionSheet, getSystemInfoSync, rsa, httpRequest] = abridge
   return [
-    alert,
-    confirm,
-    showToast,
-    showLoading,
-    hideLoading,
-    showActionSheet,
-    getSystemInfoSync,
+    abridge.alert,
+    abridge.confirm,
+    abridge.showToast,
+    abridge.showLoading,
+    abridge.hideLoading,
+    abridge.showActionSheet,
+    abridge.getSystemInfoSync,
+    abridge.rsa,
+    abridge.httpRequest,
     getAuthCode,
-    rsa,
     dtBridge,
     profile,
-    httpRequest,
     ...navigator,
   ];
 }

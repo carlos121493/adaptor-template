@@ -57,7 +57,7 @@ const apiMap = API_LIST.reduce((memo, api) => {
 
 export default {
   name: 'dtBridge',
-  call: framework => (params) => {
+  call: (framework) => (params) => {
     console.log(params); // eslint-disable-line
     const apiName = params.m;
     const api = apiMap[apiName];
@@ -72,7 +72,7 @@ export default {
       throw new Error(`Unknown API error: ${apiName}`);
     }
   },
-  native: outerFrameWork => ({ _apiName, ...params }, cb) => {
+  native: (outerFrameWork) => ({ _apiName, ...params }, cb) => {
     const nativeApi = apiMap[_apiName].native;
     if (nativeApi) {
       nativeApi(outerFrameWork)(params, cb);

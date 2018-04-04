@@ -1,14 +1,14 @@
 export default {
   name: 'device.notification.confirm',
   call: ({ my }) => ({
-    args: { title, message: content, buttonLabels: [cancelText, confirmText] },
+    args: { title, message: content, buttonLabels },
     onSuccess: success, onFail: fail,
   }) => {
     my.confirm({
       title,
       content,
-      cancelText,
-      confirmText,
+      cancelText: buttonLabels.cancelText,
+      confirmText: buttonLabels.confirmText,
       showCancel: true,
       success({ confirm }) {
         success({

@@ -1,7 +1,7 @@
 import * as SideBar from './sidebar';
-import * as Mock from './mock';
+import * as Bridge from './bridge';
 
 export default {
   SideBar,
-  Mock,
+  Bridge,
 };
