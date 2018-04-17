@@ -21,7 +21,6 @@ export default [
 		plugins: [
       resolve({
         modulesOnly: true,
-        preferBuiltins: true,
         extensions: ['.js', '.json'],
       }),
       babel({
@@ -31,6 +30,9 @@ export default [
       }),
       json({
         include: 'node_modules/**',
+      }),
+      postcss({
+        exec: true,
       }),
       builtins(),
 		]

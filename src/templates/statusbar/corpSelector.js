@@ -2,7 +2,7 @@
 import classnames from 'classnames';
 import queryString from 'query-string';
 import styles from './corpSelector.less';
-import panel from '../mockPannel';
+import panel from './mockPannel';
 
 export default {
   name: 'Dingtalk-CorpSelector',
