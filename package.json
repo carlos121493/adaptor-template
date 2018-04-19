@@ -1,7 +1,8 @@
 {
   "name": "adapter-dingtalk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
+  "auth": "sishi.gw<sishi.gw@alipay.com>",
   "main": "lib/index.js",
   "module": "src/index.js",
   "scripts": {
@@ -17,7 +18,7 @@
     "name": "钉钉",
     "id": "dingtalk",
     "server": "./lib/server.js",
-    "logo": "https://gw.alipayobjects.com/zos/rmsportal/IvBzJOhCbcmJwQfODFlX.svg",
+    "logo": "https://gw.alipayobjects.com/zos/rmsportal/IroIBcBYbhBHUvoymaQn.svg",
     "qrCodeLogo": "https://gw.alipayobjects.com/zos/rmsportal/zAzJdVEerPNfnPxoSrdf.png"
   },
   "dependencies": {
