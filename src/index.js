@@ -7,5 +7,6 @@ export default {
   SideBar,
   Bridge,
   APPX,
+  
   // Template,
 };

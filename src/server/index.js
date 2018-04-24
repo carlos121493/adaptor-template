@@ -138,6 +138,11 @@ class DingAuth extends CygnusAuth {
     });
   }
 
+  logout() {
+    this.client.setAuthState(LWPAuthState.SUBSCRIBED);
+    this.isLogin = false;
+  }
+
   onReadyProtocol(proto, callback) {
     context.on(proto, async () => {
       if (!this.ready) {
@@ -187,7 +192,13 @@ class DingAuth extends CygnusAuth {
     context.on(ServerProtocol.checkLogin, () => this.checkLogin());
     context.on(ServerProtocol.qrCode, () => this.getQRCode());
     context.on('preload:cancel', () => this.event.emit('cancel'));
-
+    context.on('logout', () => {
+      this.logout();
+      context.send({
+        method: 'logout',
+        payload: 'ddd',
+      });
+    });
     // mock api
     context.onReadyProtocol(protocol.dingProfile, async () => {
       const { userProfileModel } = getMyProfile();
