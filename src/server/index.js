@@ -139,7 +139,7 @@ class DingAuth extends CygnusAuth {
   }
 
   logout() {
-    this.client.setAuthState(LWPAuthState.SUBSCRIBED);
+    this.client.clearAuthInfo();
     this.isLogin = false;
   }
 
@@ -196,7 +196,7 @@ class DingAuth extends CygnusAuth {
       this.logout();
       context.send({
         method: 'logout',
-        payload: 'ddd',
+        payload: '',
       });
     });
     // mock api
