@@ -1,5 +1,5 @@
 {
-  "name": "adapter-dingtalk",
+  "name": "adapter-template",
   "version": "0.0.5",
   "description": "",
   "auth": "sishi.gw<sishi.gw@alipay.com>",
@@ -7,7 +7,8 @@
   "module": "src/index.js",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "dev": "node scripts/watcher.js",
+    "debug": "node scripts/debugger.js & npm run dev",
     "test": "jest"
   },
   "repository": {
@@ -15,32 +16,24 @@
     "url": "git@gitlab.alipay-inc.com:cygnus/dingtalk-adapter.git"
   },
   "adapter": {
-    "name": "钉钉",
-    "id": "dingtalk",
+    "name": "ceshi",
+    "id": "ceshi",
     "server": "./lib/server.js",
     "logo": "https://gw.alipayobjects.com/zos/rmsportal/IroIBcBYbhBHUvoymaQn.svg",
-    "qrCodeLogo": "https://gw.alipayobjects.com/zos/rmsportal/zAzJdVEerPNfnPxoSrdf.png"
+    "qrCodeLogo": "https://gw.alipayobjects.com/zos/rmsportal/ImOuhmwuDhsJWEvZJgzc.jpg"
   },
   "dependencies": {
-    "@ali/ding-mediaid": "^1.2.0",
-    "@ali/dingtalk-idl-ts": "^3.0.9",
-    "@ali/dingtalk-lwp-sdk": "^1.0.2",
-    "address": "^1.0.3",
-    "ali-oss": "^4.12.2",
-    "bufferutil": "^3.0.3",
-    "cygnus-pluginserver": "^0.0.2",
-    "events": "^2.0.0",
-    "getmac": "^1.4.1",
-    "jr-qrcode": "^1.1.1",
-    "md5-file": "^3.2.3",
-    "rollup-plugin-babel": "2",
-    "utf-8-validate": "^4.0.0"
+    "cygnus-pluginserver": "^0.0.2"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@alipay/cygnus-ide-tiny-project": "0.1.1-beta-11",
+    "@alipay/ide-ts": "0.0.7",
+    "@alipay/tiny-base": "0.1.1-beta-11",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.3",
+    "jest": "^22.4.3",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-import": "^1.6.7",
@@ -48,20 +41,20 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015-node": "^6.1.1",
-    "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.26.0",
-    "jest": "^22.4.3",
+    "chokidar": "^2.0.3",
+    "electron": "1.7.13",
+    "electron-rebuild": "^1.7.3",
     "regenerator-runtime": "^0.11.1",
     "rollup": "^0.57.1",
-    "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.2.0",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-postcss": "^1.5.1",
+    "rollup-plugin-babel": "2",
     "rollup-plugin-uglify": "^3.0.0"
   }
 }

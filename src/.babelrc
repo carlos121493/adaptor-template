@@ -1,7 +1,10 @@
 {
   "presets": [
     ["env", {
-      "modules": false
+      "modules": false,
+      "targets": {
+        "node": "7.6.0"
+      }
     }]
   ],
   "plugins": [
