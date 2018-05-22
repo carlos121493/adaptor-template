@@ -1,0 +1,1 @@
+export default 'AliApp(Custom/4.0.0)';

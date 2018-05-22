@@ -1,5 +1,6 @@
 {
   "presets": [
+    "react",
     ["env", {
       "modules": false,
       "targets": {
@@ -12,7 +13,7 @@
       "polyfill": false,
       "regenerator": true
     }],
-    "transform-object-rest-spread",
+    ["transform-object-rest-spread"],
     "external-helpers"
   ]
 }

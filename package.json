@@ -1,13 +1,12 @@
 {
-  "name": "adapter-template",
+  "name": "adaptor-template",
   "version": "0.0.5",
   "description": "",
   "auth": "sishi.gw<sishi.gw@alipay.com>",
-  "main": "lib/index.js",
-  "module": "src/index.js",
+  "main": "lib/server.js",
   "scripts": {
     "build": "rollup -c",
-    "dev": "node scripts/watcher.js",
+    "dev": "cross-env ROLLUP_WATCH=true node scripts/watcher.js",
     "debug": "node scripts/debugger.js & npm run dev",
     "test": "jest"
   },
@@ -15,25 +14,22 @@
     "type": "git",
     "url": "git@gitlab.alipay-inc.com:cygnus/dingtalk-adapter.git"
   },
-  "adapter": {
+  "adaptor": {
     "name": "ceshi",
     "id": "ceshi",
-    "server": "./lib/server.js",
-    "logo": "https://gw.alipayobjects.com/zos/rmsportal/IroIBcBYbhBHUvoymaQn.svg",
+    "logo": "https://gw.alipayobjects.com/zos/rmsportal/QJcBbWhxKvgflxOgwRwK.svg",
     "qrCodeLogo": "https://gw.alipayobjects.com/zos/rmsportal/ImOuhmwuDhsJWEvZJgzc.jpg"
   },
   "dependencies": {
     "cygnus-pluginserver": "^0.0.2"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@alipay/cygnus-ide-tiny-project": "0.1.1-beta-11",
-    "@alipay/ide-ts": "0.0.7",
-    "@alipay/tiny-base": "0.1.1-beta-11",
+    "@alipay/cygnus-ide-tiny-project": "2.0.1-beta.1",
+    "@alipay/ide-ts": "0.0.9",
+    "@alipay/tiny-base": "2.0.1-beta.1",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.3",
-    "jest": "^22.4.3",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-import": "^1.6.7",
@@ -45,16 +41,19 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.26.0",
     "chokidar": "^2.0.3",
+    "copy-dir": "^0.3.0",
     "electron": "1.7.13",
     "electron-rebuild": "^1.7.3",
+    "jest": "^22.4.3",
+    "less": "^3.0.4",
     "regenerator-runtime": "^0.11.1",
     "rollup": "^0.57.1",
+    "rollup-plugin-babel": "2",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.2.0",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-postcss": "^1.5.1",
-    "rollup-plugin-babel": "2",
     "rollup-plugin-uglify": "^3.0.0"
   }
 }
