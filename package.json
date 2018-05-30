@@ -1,6 +1,6 @@
 {
-  "name": "adaptor-template",
-  "version": "0.0.5",
+  "name": "@alipay/adaptor-template",
+  "version": "0.0.1",
   "description": "",
   "auth": "sishi.gw<sishi.gw@alipay.com>",
   "main": "lib/server.js",
@@ -14,6 +14,9 @@
     "type": "git",
     "url": "git@gitlab.alipay-inc.com:cygnus/dingtalk-adapter.git"
   },
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
   "adaptor": {
     "name": "ceshi",
     "id": "ceshi",
@@ -25,9 +28,9 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@alipay/cygnus-ide-tiny-project": "2.0.1-beta.1",
-    "@alipay/ide-ts": "0.0.9",
-    "@alipay/tiny-base": "2.0.1-beta.1",
+    "@alipay/ide-ts": "0.1.2",
+    "@alipay/volans-ide-tiny-project": "6.0.1-beta.4",
+    "@alipay/tiny-base": "6.0.1-beta.4",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.3",
     "babel-plugin-add-module-exports": "^0.2.1",
